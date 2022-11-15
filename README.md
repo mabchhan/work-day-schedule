@@ -37,3 +37,13 @@ GIVEN I am using a daily planner to create a schedule
 - WHEN I refresh the page
 
   -THEN the saved events persist
+
+  ### Link
+
+  - link to repo
+
+    - https://github.com/mabchhan/work-day-schedule
+
+  - link to deployed
+
+    -
