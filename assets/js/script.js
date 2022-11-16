@@ -3,6 +3,50 @@
 // in the html.
 
 $(function () {
+  var id = [
+    "hour-9",
+    "hour-10",
+    "hour-11",
+    "hour-12",
+    "hour-13",
+    "hour-14",
+    "hour-15",
+    "hour-16",
+    "hour-17",
+  ];
+
+  for (var i = 0; i < 9; i++) {
+    var mainContainer = $(".container-lg");
+    var container = $('<div class="row time-block "></div>');
+    container.attr("id", id[i]);
+    // container.text(id[i]);
+
+    var textHour = $(
+      '<div class="col-2 col-md-1 hour text-center py-3"></div>'
+    );
+    var hour = id[i].split("-")[1];
+
+    textHour.text(hour + "AM");
+    if (hour >= 12) {
+      textHour.text(hour - 12 + "PM");
+    }
+
+    var textArea = $(
+      '<textarea class="col-8 col-md-10 description" rows="3"> </textarea>'
+    );
+
+    var button = $(
+      '<button class="btn saveBtn col-2 col-md-1" aria-label="save"></button>'
+    );
+
+    var img = $('<i class="fas fa-save" aria-hidden="true"></i>');
+
+    mainContainer.append(container);
+    container.append(textHour);
+    container.append(textArea);
+    container.append(button);
+    button.append(img);
+  }
   // saveBtn click listener
   $(".saveBtn").on("click", function () {
     // Get nearby values of the description in JQuery
