@@ -46,4 +46,4 @@ GIVEN I am using a daily planner to create a schedule
 
   - link to deployed
 
-    -
+    - https://mabchhan.github.io/work-day-schedule/
